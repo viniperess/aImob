@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px; 
+}
+
+body {
+  background-color: #b3b3b3;
+}
+.imag {
+  width: 50px;
+  height: 50px;
+  opacity: 0.3;
+}
+
+.item1 {
+  grid-area: esquerda;
+  grid-area: 3 / 2 / 40 / 3;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 50px;
+  /* border: none; */
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #b3b3b3;
+}
+
+.item2 {
+  grid-area: direita;
+  grid-area: 3 / 4 / 40 / 6;
+  opacity: 0.5;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "esquerda esquerda direita direita direita"
+    "esquerda esquerda direita direita direita"
+    "esquerda esquerda direita direita direita"
+    "esquerda esquerda direita direita direita";
+  grid-gap: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+	width: 120%;
+	margin: 25px 30px 0 35px;
+	padding: 10px;
+	border: none;
+	border-radius: 50px;
+    text-align: center;
+}
+
+#pesquisar {
+	width: 83%;
+	margin: 10px 30px 0 35px;
+	padding: 10px;
+	border: none;
+	border-radius: 50px;
+  text-align: center;
+  color: white;
+	background: linear-gradient(to right, orangered, #DC143C);
+	cursor: pointer;
+  
+}
+.form{
+	display: flex;
+	flex-direction: column;
+}
+
+h3 {
+  background:#DC143C;
+  border-radius: 50px;
+  color: white;
+  padding: 20px 40px;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.lista {
+    border-radius: 50px;
+    padding: 45px 20px 10px 20px;
+    margin: 20px 10px 20px 400px;
+    background: #DC143C;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    width: 40%;
+    
+  }
+  
+  
+@media (max-width: 800px) {
+  .item2 {
+      opacity: 0;
+  }
+}
+@media (max-width:600px) {
+  .item2{
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .item1, input, #pesquisar{
+      width: 70vw;
+  }
+}
+@media (max-width:600px) {
+  .item1, input, #pesquisar {
+    width: 70vw;
+  }
+}
+
+
+@media (max-width: 800px) {
+  h3 {
+      width: 80vw;
+  }
+}
+@media (max-width:600px) {
+  h3 {
+    width: 80vw;
+  }
+}

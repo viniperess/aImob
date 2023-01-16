@@ -1,0 +1,52 @@
+CREATE database imobiliaria;
+
+
+USE imobiliaria;
+
+CREATE TABLE pessoa (
+codpessoa SERIAL PRIMARY KEY,
+nome VARCHAR(250) NOT NULL,
+email VARCHAR(250) UNIQUE NOT NULL,
+senha VARCHAR(250) NOT NULL,
+status BOOLEAN DEFAULT FALSE,
+reg_date date NOT NULL default CURRENT_DATE
+);
+
+
+alter table pessoa add column token varchar(10);
+
+CREATE TABLE proprietario (
+codproprietario INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(30) NOT NULL,
+email VARCHAR(30) NOT NULL,
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+insert into proprietario (nome,email) values ('Orval Cassa','imobiliariaorvalcassa@hotmail.com');
+
+CREATE TABLE imovel (
+codimovel INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+endereco VARCHAR(30) NOT NULL,
+numero INT(6) NOT NULL,
+bairro VARCHAR(30) NOT NULL,
+cep INT(15) NOT NULL,
+quarto INT(6) NOT NULL,
+banheiro INT(6) NOT NULL, 
+garagem BOOLEAN DEFAULT FALSE,
+patio BOOLEAN DEFAULT FALSE,
+tipo BOOLEAN DEFAULT FALSE,
+locado BOOLEAN DEFAULT FALSE,
+valor INT(10) NOT NULL,
+imagem VARCHAR(50) DEFAULT 'casa.jpg' NOT NULL,
+codproprietario INT(6) UNSIGNED,
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+FOREIGN KEY (codproprietario) REFERENCES proprietario(codproprietario)
+);
+
+CREATE TABLE imagem (
+codimagem INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+codimovel INT(6) UNSIGNED,
+imagem VARCHAR(50) NOT NULL UNIQUE,
+FOREIGN KEY (codimovel) REFERENCES imovel(codimovel)
+);
+
