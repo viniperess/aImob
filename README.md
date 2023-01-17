@@ -9,11 +9,10 @@
 
 ## Descrição
 
-- Aplicação foi feita com base na metodologia ágil SCRUM com sprints a cada 2 dias com duração de 5 dias, disponível para consulta no <a href="https://trello.com/b/j5GiWZSA/projeto-imobiliaria" target="_blank">Trelo</a>.<br>
-Conta com validação de email no cadastro alterando o status para TRUE,
-criptografia de senha no banco de dados, pesquisa avançada, foi utilizado ajax e consumida API do cep para cadastro de imóvel, 
-a prototipação, sitemap e wireframe feito no <a href="https://www.figma.com/file/9ueuFxHop0eYGVIyXL9ffx/Untitled?node-id=0%3A1&t=hbslPo4geMuTb3up-1" target="_blank">Figma.</a><br>
-Algumas telas do front foram feitas com Bootstrap, o restante com GRID e telas responsivas para dispositivos menores.
+- Aplicação foi feita com base na metodologia ágil SCRUM com sprints de 5 dias, disponível para consulta juntamente com toda a documentação no <a href="https://trello.com/b/j5GiWZSA/projeto-imobiliaria" target="_blank">Trelo</a>.<br>
+Conta com validação de email no cadastro alterando o status,
+criptografia de senha no banco de dados, pesquisa avançada, foi utilizado ajax e consumida API do cep para cadastro de imóvel. Prototipação, sitemap e wireframe feito no <a href="https://www.figma.com/file/9ueuFxHop0eYGVIyXL9ffx/Untitled?node-id=0%3A1&t=hbslPo4geMuTb3up-1" target="_blank">Figma.</a><br>
+Algumas telas do front foram feitas com Bootstrap, o restante com grid layout. Telas responsivas para dispositivos menores.
 
 
 ## 🧪 Tecnologias
